@@ -207,9 +207,9 @@ app.post('/savePerson', function (req, res) {
 	let ageInputP = req.body.ageInputP;	
 	let jobInputP = req.body.jobInputP;	
 	let salaryInputP = req.body.salaryInputP;	
-	let marriedInputP = req.body.marriedInputP;	
+	let marriedInputP = Boolean(req.body.marriedInputP);	
 	
-	Person.create({ firstName: firstnameInputP, lastName: lastnameInputP }).then(person => {
+	Person.create({ firstName: firstnameInputP, lastName: lastnameInputP, age: ageInputP, job: jobInputP, salary: salaryInputP, isMarried: marriedInputP}).then(person => {
 		console.log(person.get(	{plain: true}	));
 	});
 	
