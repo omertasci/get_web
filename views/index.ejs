@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">	
+      <fieldset>
+        <form action="/" method="post">
+          <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+          <input type="submit" class="ghost-button" value="Get Weather">
+        </form>
+		
+		<% if(weather !== null){ %>
+		  <p><%= weather %></p>
+		<% } %>
+		<% if(error !== null){ %>
+		  <p><%= error %></p>
+		<% } %>
+      </fieldset>
+    </div>
+	
+	<div class="container">
+      <fieldset>
+        <form action="/saveUser" method="post">
+          <input name="firstnameInput" type="text" class="ghost-input" placeholder="Enter first name" required>
+		  <input name="lastnameInput" type="text" class="ghost-input" placeholder="Enter last name" required>		  
+          <input type="submit" class="ghost-button" value="Save User">
+        </form>
+	
+		<% if(firstname !== null & lastname !== null){ %>
+		  <p><%= firstname + " " + lastname%></p>
+		<% } %>
+      </fieldset>
+    </div>
+	
+	<div class="container">
+      <fieldset>
+        <form action="/savePerson" method="post">
+          <input name="firstnameInputP" type="text" class="ghost-input" placeholder="Enter first name" required>
+		  <input name="lastnameInputP" type="text" class="ghost-input" placeholder="Enter last name" required>
+		  <input name="ageInputP" type="number" class="ghost-input" placeholder="Enter age" required>
+		  <input name="jobInputP" type="text" class="ghost-input" placeholder="Enter job" required>
+		  <input name="salaryInputP" type="number" class="ghost-input" placeholder="Enter salary" required>
+		  <input name="marriedInputP" type="checkbox" class="ghost-input" placeholder="Is married?" required>
+          <input type="submit" class="ghost-button" value="Save Person">
+        </form>
+	
+		<% if(firstname !== null & lastname !== null){ %>
+		  <p><%= firstname + " " + lastname%></p>
+		<% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>

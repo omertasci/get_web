@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    
+	<div class="container">
+      <fieldset>
+        <form action="/sendMail" method="post">
+          <input name="toInput" type="text" class="ghost-input" placeholder="Enter a reciever" required>
+		  <input name="subjectInput" type="text" class="ghost-input" placeholder="Enter a subject" required>
+		  <input name="textInput" type="text" class="ghost-input" placeholder="Enter your message text" required>
+          <input type="submit" class="ghost-button" value="Send Mail">
+        </form>
+		
+		<% if(reciever !== null && reciever !== ''){ %>
+		  <p><%= "Your mail is sent to " + reciever + " succesfully." %></p>
+		<% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
