@@ -6,11 +6,11 @@ const nodemailer = require('nodemailer');
 const mysql = require('mysql');
 const Sequelize = require('sequelize');
 
-const apiKey = '04a28ed626c455e1e15da0403ef5c81b';          //'682d666b2ab407f5c8bb6104ab7a1bc8';
+const apiKey = '04a28ed626c455e1e15da0403ef5c81b';
 
 var sender = {
     username: 'omertasci.ce@gmail.com',
-    pass: 'omertasci+D6GKTA',
+    pass: 'mypassword',
 	fromName: 'Ömer Taşcı'
   };
 
@@ -228,7 +228,7 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: sender.username,  //'omertasci.ce@gmail.com',
-    pass: sender.pass //'omertasci+D6GKTA'
+    pass: sender.pass
   }
 });
 
